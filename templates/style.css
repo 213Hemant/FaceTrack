@@ -1,0 +1,156 @@
+/* Reset default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center; /* Vertically center content */
+}
+
+/* Add a gradient background and style headings */
+h1 {
+    color: #2c3e50;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    /* -webkit-background-clip: text; */
+    color: transparent; /* Gradient text effect */
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #7f8c8d;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+#video-container {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center;
+    margin: 20px auto;
+    position: relative;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    width: 700px;
+    max-width: 100%; /* Make it responsive */
+}
+
+/* Style video feed and spinner */
+img {
+    border: 3px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    max-width: 100%; /* Responsive video feed */
+}
+
+.spinner {
+    border: 6px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 6px solid #3498db;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Style the buttons */
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    margin: 10px;
+    background-color: #3498db;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    width: 180px; /* Increase button width */
+}
+
+button:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px); /* Add a hover lift effect */
+}
+
+/* Style the close button differently */
+#close-webapp {
+    background-color: #e74c3c;
+}
+
+#close-webapp:hover {
+    background-color: #c0392b;
+}
+
+/* Style the status section */
+#status {
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    max-width: 100%;
+    display: none; /* Initially hidden */
+}
+
+/* Style the attendance list */
+#attendance-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#attendance-list li {
+    padding: 12px;
+    background-color: #2ecc71;
+    color: white;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 1rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Add media query for responsiveness */
+@media (max-width: 768px) {
+    #video-container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        width: 100%; /* Full width buttons on smaller screens */
+    }
+
+    #status {
+        width: 100%;
+    }
+}

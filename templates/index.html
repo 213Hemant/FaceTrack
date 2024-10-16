@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FaceTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>FaceTrack</h1>
+    <h3>Knowing Faces, Tracking Moments</h3>
+    <div id="video-container">
+        <div class="spinner" id="spinner"></div>
+        <img id="video-feed" src="" width="640" height="480" style="display:none;">
+
+        <!-- Controls moved to the right of the video -->
+        <div class="controls">
+            <button id="start-video">Start Video</button>
+            <button id="stop-video" style="display:none;">Stop Video</button>
+            <button id="close-webapp">Close WebApp</button>
+        </div>
+    </div>
+
+    <div id="status">
+        <h3>Attendance Status</h3>
+        <ul id="attendance-list">
+            <!-- Recognized names will be inserted here dynamically -->
+        </ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
